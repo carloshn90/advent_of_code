@@ -12,13 +12,13 @@ test("convertInput", () => {
 
   const result: Game = convertInputToGame("Game 101: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green");
 
-  assert.deepEqual(new Game(101, expectedGameSets), result);
+  assert.deepEqual(result, new Game(101, expectedGameSets));
 });
 
 test("convertInputToGameSet", () => {
   const result: GameSet = convertInputToGameSet(" 3 blue, 4 red, 2 green");
 
-  assert.deepEqual(new GameSet(4, 2, 3), result);
+  assert.deepEqual(result, new GameSet(4, 2, 3));
 });
 
 test("sumAllPossibleGames", () => {
@@ -32,12 +32,12 @@ test("sumAllPossibleGames", () => {
   ];
   const result: number = sumAllPossibleGames(games);
 
-  assert.equal(8, result);
+  assert.equal(result, 8);
 });
 
 test("powerOfFewestNumberOfCubesOfEachColor", () => {
 
   const result: number = powerOfFewestNumberOfCubesOfEachColor([new GameSet(4, 0, 3), new GameSet(1, 2, 6), new GameSet(0, 2, 0)]);
 
-  assert.equal(48, result);
+  assert.equal(result, 48);
 });

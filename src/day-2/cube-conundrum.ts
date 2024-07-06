@@ -12,7 +12,6 @@ export class GameSet {
 }
 
 export class Game {
-
   id: number;
   sets: Array<GameSet>;
 
